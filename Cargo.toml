@@ -1,0 +1,20 @@
+[package]
+name = "api-exporter"
+version = "1.0.0"
+edition = "2021"
+description = "扫描 Spring Boot 源码生成 OpenAPI 3.0 并导入 Apifox"
+
+[[bin]]
+name = "api-exporter"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive", "env"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+serde_yaml = "0.9"
+walkdir = "2"
+anyhow = "1"
+ureq = { version = "2", features = ["json"] }
+tree-sitter = "0.24"
+tree-sitter-java = "0.23.5"

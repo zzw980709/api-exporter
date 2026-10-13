@@ -1,0 +1,7 @@
+/target
+/build
+/.cargo/config.toml
+/.DS_Store
+.env
+.env.*
+!.env.example
